@@ -2,6 +2,7 @@ FROM ubuntu:artful
 
 RUN apt-get update
 RUN apt-get install -y \
+    git \
     gdb \
     make \
     gcc \
@@ -15,7 +16,9 @@ RUN apt-get install -y \
 
 RUN pip install pwntools angr requests
 
-# This could be done shorter but idk
+RUN git clone https://github.com/pwndbg/pwndbg && cd pwndbg && ./setup.sh
+
+# This could be done shorter but idc
 RUN groupadd -g 99999 jailed
 RUN useradd --uid 99999 --gid 99999 jailed
 RUN mkdir /home/jailed
