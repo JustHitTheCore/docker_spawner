@@ -11,7 +11,7 @@ For real ctf hosting, you should probably research either [setting capabilities]
 
 This requires `socat` to be installed. After that you can prepare directory with tasks in `./tasks` and then launch `./host.sh`.
 
-This will build docker image called `ctf_workshops` and then serve server through socat on port 4444.
+This will build docker image called `ctf_workshops` and then host a forking server through socat on port 4444.
 
 After connecting to the server it will spawn a docker container based on `ctf_workshops` image.
 
