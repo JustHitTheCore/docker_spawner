@@ -2,7 +2,7 @@ FROM ubuntu:artful
 
 RUN apt-get update
 RUN apt-get install -y \
-    fakesudo \
+    fakeroot \
     git \
     gdb \
     make \
